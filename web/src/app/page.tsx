@@ -1,10 +1,22 @@
 export default function HomePage() {
   return (
-    <main className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold">Welcome</h1>
-      <p className="text-muted-foreground">
-        Replace this with your feature implementation.
-      </p>
-    </main>
+    <div>
+      <header className="w-full bg-background border-b px-6 py-4">
+        <span className="text-lg font-semibold">
+          BetterBond Commission Payments
+        </span>
+      </header>
+      <main className="px-6 py-8">
+        <h1 className="text-2xl font-bold tracking-widest mb-6">DASHBOARD</h1>
+        <section aria-labelledby="agency-summary-heading" className="mt-8">
+          <h2
+            id="agency-summary-heading"
+            className="text-xl font-bold tracking-widest mb-4"
+          >
+            AGENCY SUMMARY
+          </h2>
+        </section>
+      </main>
+    </div>
   );
 }

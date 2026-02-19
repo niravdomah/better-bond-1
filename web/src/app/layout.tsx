@@ -24,7 +24,7 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <ToastProvider>
             <div className="min-h-screen flex flex-col">
-              <main className="flex-1">{children}</main>
+              <div className="flex-1">{children}</div>
             </div>
             <ToastContainer />
           </ToastProvider>
