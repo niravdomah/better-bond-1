@@ -4,14 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Template repository** for building frontend applications with:
+**BetterBond Commission Payments POC** - A three-screen commission payment management application for viewing, parking, initiating, and reviewing commission payment batches by agency.
 
-- Next.js 16 (App Router) + React 19 + TypeScript 5 (strict)
-- Tailwind CSS 4 + Shadcn UI (via MCP server)
-- Vitest + React Testing Library
-- Production-ready API client for OpenAPI-defined REST endpoints
+**Tech Stack:** Next.js 16 + React 19 + TypeScript 5 + Tailwind CSS 4 + Shadcn UI
 
-Users clone this template and use Claude Code to generate features, components, and API integrations.
+**Backend API:** Defined in `documentation/Api Definition.yaml`. Connects to live REST API at `http://localhost:8042`.
+
+**Planned Epics:**
+1. Dashboard - At-a-glance metrics (bar charts, value cards, aging report) and clickable agency summary grid
+2. Payment Management - Per-agency grid, single/bulk park and unpark flows, initiate payment batch with invoice generation
+3. Payments Made - Historical payment batches per agency with invoice PDF download
 
 ## Repository Structure
 
