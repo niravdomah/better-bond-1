@@ -106,8 +106,8 @@
 - API base URL: `http://localhost:8042` (defined in `documentation/Api Definition.yaml`)
 - All API calls must go through `web/src/lib/api/client.ts` — never call `fetch()` directly
 - Currency formatting must use South African locale (en-ZA): thousand separator is a non-breaking space, decimal separator is a comma. Example: `R 1 234 567,89`. Use `Intl.NumberFormat('en-ZA', { style: 'currency', currency: 'ZAR' })` or equivalent.
-- Bar charts: Use a charting library already in the project (e.g., Recharts if available). Check `web/package.json` before choosing. Charts must be client-side — use `"use client"` on chart components.
-- The six metric components are arranged in a 2-column grid per the wireframe (3 rows of 2).
+- **Charting library:** Recharts is NOT installed in `web/package.json`. Before implementing chart components, install Recharts: `npm install recharts` from the `web/` directory. Charts must be client-side — add `"use client"` to any component that uses Recharts.
+- The six metric components are arranged in a 2-column grid per the wireframe (3 rows of 2). Insert this grid in `app/page.tsx` between the existing `<h1>DASHBOARD</h1>` heading and the existing `<section aria-labelledby="agency-summary-heading">` section.
 - The agency dropdown filter (Story 4) will later pass a selected agency name to these components. Design the metric components to accept an optional `agencyName` prop — defaulting to "all agencies" (no filter) for this story.
 - Data fetching should happen server-side where possible (page-level fetch) and passed as props to client components.
 - Note: `TotalPaymentCountInLast14Days` is a count, not a monetary value. The spec says "Total Value of Payments Made (Last 14 Days)" — if the API only provides a count, display the count with appropriate label and flag the discrepancy in a code comment for future resolution.
